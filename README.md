@@ -1,24 +1,39 @@
-# Consumer Insights Survey NLP Dashboard
+# 消费者调研与市场洞察看板
 
-A reproducible market research project for FMCG, brand marketing, user research, and strategy internships. It combines survey analytics, brand funnel tracking, NPS, customer segmentation, open-ended feedback topic mining, price sensitivity, and opportunity prioritization.
+这是一个面向快消品牌市场、市场研究、用户研究、消费者洞察和咨询岗位的市场研究项目。项目使用 Python 生成模拟消费者问卷数据，并整合品牌漏斗、NPS、人群聚类、开放题主题挖掘、价格敏感度和增长机会优先级排序。
 
-The dataset is synthetic and generated locally. The implementation is original; no external project code is copied.
+数据为本地生成的模拟数据，代码为原创实现，未复制外部项目代码。
 
-## Open-source Inspiration
+## 项目亮点
 
-- [MaartenGr/BERTopic](https://github.com/MaartenGr/BERTopic): topic modeling and interpretable topic summary inspiration.
-- [scikit-learn/scikit-learn](https://github.com/scikit-learn/scikit-learn): KMeans, TF-IDF, and NMF modeling workflow.
-- [plotly/dash-sample-apps](https://github.com/plotly/dash-sample-apps): data product storytelling and dashboard inspiration.
+- 生成 5,200 份模拟消费者问卷样本。
+- 覆盖人口属性、渠道、品类、品牌认知、考虑、试用、复购、NPS 和开放题反馈。
+- 使用 KMeans 进行消费者分群。
+- 使用 TF-IDF 和 NMF 对开放题反馈做主题挖掘。
+- 计算品牌认知-考虑-试用-复购漏斗。
+- 分析 NPS、满意度、支付意愿和价格敏感度。
+- 输出细分人群画像、主题痛点、价格建议和机会地图。
 
-## What It Does
+## 项目结构
 
-- Generates 5,200 synthetic consumer survey responses with demographics, attitudes, brand funnel stages, NPS, willingness to pay, and open-ended feedback.
-- Profiles consumer segments with KMeans based on price sensitivity, quality expectation, convenience need, sustainability attitude, willingness to pay, purchase frequency, and satisfaction.
-- Mines feedback topics with TF-IDF and NMF.
-- Builds brand funnel, NPS, price sensitivity, and opportunity prioritization reports.
-- Provides SQL examples for channel funnel, segment NPS, and topic pain-point analysis.
+```text
+.
+|-- app.py                         # Streamlit 市场洞察看板
+|-- data/                          # 模拟消费者问卷
+|-- outputs/                       # 分群、主题、漏斗、价格和洞察报告
+|-- scripts/
+|   |-- generate_demo_data.py      # 生成模拟数据
+|   `-- run_insights.py            # 运行洞察分析
+|-- sql/
+|   `-- market_research_queries.sql
+|-- src/consumer_insights/
+|   |-- analytics.py               # 分群、主题、漏斗、价格分析
+|   `-- data.py                    # 数据生成与读取
+`-- tests/
+    `-- test_insights.py
+```
 
-## Quick Start
+## 快速开始
 
 ```bash
 python -m pip install -r requirements.txt
@@ -28,19 +43,37 @@ streamlit run app.py
 python -m unittest discover -s tests
 ```
 
-## Outputs
+## 已生成样例结果
 
-- `outputs/survey_kpis.json`: executive survey metrics.
-- `outputs/segment_profiles.csv`: segment size, funnel, NPS, WTP, and attitude scores.
-- `outputs/brand_funnel_overall.csv` and `outputs/brand_funnel_by_segment.csv`: funnel conversion tables.
-- `outputs/topic_terms.csv`: feedback topic summaries.
-- `outputs/price_sensitivity.csv`: demand and revenue index by price point.
-- `outputs/opportunity_map.csv`: segment x topic opportunity priorities.
-- `outputs/insights_report.md`: interview-ready insight report.
+- 问卷样本：5,200
+- 品牌认知率：64.69%
+- 试用率：60.50%
+- 复购率：64.31%
+- NPS：24.87
+- 平均支付意愿：26.28
+- 样例最优演示价格点：20
 
-## Resume Evidence Draft
+## 输出文件
 
-Use only after the repository is uploaded and reviewed:
+- `outputs/survey_kpis.json`：核心调研指标。
+- `outputs/segment_profiles.csv`：消费者分群画像。
+- `outputs/brand_funnel_overall.csv`：总体品牌漏斗。
+- `outputs/brand_funnel_by_segment.csv`：分群品牌漏斗。
+- `outputs/topic_terms.csv`：开放题主题词。
+- `outputs/price_sensitivity.csv`：价格敏感度。
+- `outputs/opportunity_map.csv`：机会优先级。
+- `outputs/insights_report.md`：市场洞察摘要。
 
-> Built a consumer insights dashboard using Python and Streamlit, integrating survey funnel, NPS, KMeans segmentation, TF-IDF/NMF topic mining, price sensitivity, and opportunity prioritization; translated quantitative survey and open-ended feedback into segment-specific brand, channel, pricing, and CRM recommendations.
+## 适配岗位
+
+- 快消品牌市场实习
+- 市场研究实习
+- 用户研究实习
+- 消费者洞察实习
+- 咨询消费者组 / 战略分析实习
+- 增长市场实习
+
+## 可写入简历的表述
+
+搭建消费者洞察分析看板，基于 5,200 份模拟问卷样本整合品牌认知-考虑-试用-复购漏斗、NPS、KMeans 人群聚类、TF-IDF/NMF 开放题主题挖掘、价格敏感度和增长机会优先级排序；输出细分人群画像、渠道漏斗、主题痛点和价格策略建议。
 
