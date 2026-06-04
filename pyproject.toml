@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "consumer-insights-survey-nlp-dashboard"
+version = "0.1.0"
+description = "Consumer survey, NPS, segmentation, topic mining, and pricing insight dashboard."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "plotly>=5.18",
+    "streamlit>=1.30",
+    "scikit-learn>=1.3",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

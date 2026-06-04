@@ -1,0 +1,6 @@
+segment,respondents,awareness_rate,trial_rate,repeat_rate,avg_nps,nps_score,willingness_to_pay,price_sensitivity,quality_expectation,convenience_need,sustainability_attitude,share
+Convenience Driven,1076,0.6441,0.6942,0.7584,8.6441,51.3011,26.8806,5.6142,6.9506,8.7095,5.4784,0.2069
+Eco Advocates,865,0.6566,0.6497,0.6798,8.578,50.1734,33.3721,5.4022,7.5762,6.5714,8.96,0.1663
+High Value Fans,1043,0.6606,0.5944,0.6903,8.1793,31.6395,19.9426,7.6083,6.6416,6.108,5.6395,0.2006
+Quality Loyalists,1209,0.6394,0.6617,0.751,8.8974,63.3581,32.18,4.8303,8.9134,6.6368,6.4072,0.2325
+Value Seekers,1007,0.6365,0.4141,0.3098,5.4727,-78.3515,19.0352,8.2796,6.3582,5.9099,5.1893,0.1937

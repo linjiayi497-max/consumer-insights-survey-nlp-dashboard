@@ -1,0 +1,5 @@
+group,stage,count,rate_from_total,step_conversion,drop_off
+overall,awareness,3364,0.6469,0.6469,1836
+overall,consideration,3705,0.7125,1.1014,-341
+overall,trial,3146,0.605,0.8491,559
+overall,repeat_purchase,3344,0.6431,1.0629,-198
